@@ -1,8 +1,8 @@
-import { createStore } from "vuex";
-
+import { createStore, ModuleTree } from "vuex";
+import NavigationModule from "./Navigation";
+export type State = { modules: ModuleTree<typeof NavigationModule> };
 export default createStore({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {}
+  modules: {
+    NavigationModule
+  }
 });
